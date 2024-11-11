@@ -48,8 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const excesso = velocidade - limiteVelocidade;
           const multa = excesso > 0 ? excesso * 10 : 0;
 
-          document.getElementById("resultado").value =
-            multa > 0 ? `Multa a pagar: ${multa} unidades monetárias.` : "Nenhuma multa. Dentro do limite de velocidade.";
+          document.getElementById("resultado").value = multa > 0 ? `Multa a pagar: ${multa}€.` : "Nenhuma multa. Dentro do limite de velocidade.";
         } else {
           alert("Estrada inválida.");
         }
