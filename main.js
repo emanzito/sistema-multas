@@ -13,33 +13,38 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Erro ao carregar estradas:", error));
 
-  // Carregar opções de veículos
-  fetch("veiculos.json")
-    .then((response) => response.json())
-    .then((veiculos) => {
-      const selectVeiculo = document.getElementById("veiculo");
-      veiculos.forEach((veiculo) => {
-        const option = document.createElement("option");
-        option.value = veiculo.id;
-        option.textContent = veiculo.nome;
-        selectVeiculo.appendChild(option);
-      });
-    })
-    .catch((error) => console.error("Erro ao carregar veículos:", error));
-  //ADICIONAR LIMITE DE IDADE///////////////////////////////////////////////////////////////////////////////////////////////////
   // Função de submissão do formulário e cálculo da multa
   document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const idade = parseFloat(document.getElementById("idade").value);
+    if (idade < 18 || idade > 89) {
+      window.alert("Idade de indivíduo inválida para este formulário!");
+      return;
+    }
+
     const velocidade = parseInt(document.getElementById("velocidade").value);
     const estradaSelecionada = document.getElementById("estrada").value;
+    const veiculoSelecionado = document.getElementById("veiculo").value;
 
     fetch("estradas.json")
       .then((response) => response.json())
       .then((estradas) => {
         const estrada = estradas.find((e) => e.id === estradaSelecionada);
         if (estrada) {
-          const limiteVelocidade = estrada.limiteVelocidade;
+          // Define o limite de velocidade com base no tipo de estrada e no tipo de veículo selecionado
+          let limiteVelocidade;
+
+          // Verifica se é uma autoestrada (usando limites sem "1") ou estrada nacional (usando limites com "1")
+          if (estrada.limitevelocidadligeiros && estrada.limitevelocidadepesados) {
+            limiteVelocidade = veiculoSelecionado === "ligeiro" ? estrada.limitevelocidadligeiros : estrada.limitevelocidadepesados;
+          } else if (estrada.limitevelocidadligeiros1 && estrada.limitevelocidadepesados1) {
+            limiteVelocidade = veiculoSelecionado === "ligeiro" ? estrada.limitevelocidadligeiros1 : estrada.limitevelocidadepesados1;
+          } else {
+            alert("Estrada inválida.");
+            return;
+          }
+
           const excesso = velocidade - limiteVelocidade;
           const multa = excesso > 0 ? excesso * 10 : 0;
 
