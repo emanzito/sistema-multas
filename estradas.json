@@ -10,16 +10,16 @@
   { "id": "A23", "nome": "A23 (Torres novas-Guarda)", "limitevelocidadligeiros": "120", "limitevelocidadepesados": "90" },
   { "id": "A24", "nome": "A24 (Viseu-Chaves)", "limitevelocidadligeiros": "120", "limitevelocidadepesados": "90" },
 
-  { "id": "N1/IC2", "nome": "N1/IC2", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "90" },
-  { "id": "EN9", "nome": "EN9 (Sintra-Alenquer)", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "90" },
-  { "id": "N10", "nome": "Estrada Nacional 10", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "90" },
-  { "id": "N117", "nome": "Estrada Nacional 117", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "90" },
-  { "id": "N125", "nome": "Estrada Nacional 125", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "90" },
-  { "id": "N206", "nome": "Estrada Nacional 206", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "90" },
-  { "id": "lisboa", "nome": "Lisboa, Radial Benfica, Segunda Circula", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" },
-  { "id": "porto", "nome": "Porto, VCI, Avenida da Boavista", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" },
-  { "id": "coimbra", "nome": "Coimbra, centro urbano", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" },
-  { "id": "setubal", "nome": "Setúbal, centro e EN10", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" },
-  { "id": "veiculo-ligeiro", "nome": "Ligeiros (Carros/motas)", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" },
-  { "id": "veiculo-ligeiro", "nome": "Pesados (Camiões/Autocarros)", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "70" }
+  { "id": "N1/IC2", "nome": "N1/IC2", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "EN9", "nome": "EN9 (Sintra-Alenquer)", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "N10", "nome": "Estrada Nacional 10", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "N117", "nome": "Estrada Nacional 117", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "N125", "nome": "Estrada Nacional 125", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "N206", "nome": "Estrada Nacional 206", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "lisboa", "nome": "Lisboa, Radial Benfica, Segunda Circula", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "porto", "nome": "Porto, VCI, Avenida da Boavista", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "coimbra", "nome": "Coimbra, centro urbano", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "setubal", "nome": "Setúbal, centro e EN10", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "veiculo-ligeiro", "nome": "Ligeiros (Carros/motas)", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
+  { "id": "veiculo-ligeiro", "nome": "Pesados (Camiões/Autocarros)", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" }
 ]
