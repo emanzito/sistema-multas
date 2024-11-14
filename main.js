@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const excesso = velocidade - limiteVelocidade;
           const multa = excesso > 0 ? excesso * 10 : 0;
 
-          document.getElementById("resultado").value = multa > 0 ? `Multa a pagar: ${multa}€.` : "Nenhuma multa a pagar.";
+          document.getElementById("resultado").value = multa > 0 ? `O indivíduo tem a pagar de multa: ${multa}€.` : "Nenhuma multa a pagar.";
         } else {
           alert("Estrada inválida.");
         }
