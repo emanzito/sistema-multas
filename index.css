@@ -1,0 +1,180 @@
+/* Definindo a cor de fundo da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte mais moderna e legível */
+  background-color: #f4f4f9; /* Fundo claro */
+  color: #333; /* Cor do texto */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160vh;
+  flex-direction: column; /* Permite que os itens se ajustem verticalmente */
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Container para centralizar o formulário */
+form {
+  background-color: #ffffff; /* Fundo branco para o formulário */
+  padding: 20px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  width: 100%;
+  max-width: 600px; /* Largura máxima */
+  box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+/* Título do formulário */
+h1 {
+  text-align: center;
+  color: #2c3e50; /* Cor do título */
+  margin-bottom: 20px;
+  font-size: 24px;
+  word-wrap: break-word; /* Garante que o título se quebre em telas pequenas */
+  max-width: 100%;
+}
+
+/* Subtítulo */
+h2 {
+  color: #34495e;
+  font-size: 18px;
+  margin-bottom: 50px;
+  word-wrap: break-word; /* Garante que o subtítulo também se quebre */
+}
+
+/* Estilo das labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 16px;
+  word-wrap: break-word; /* Quebra de linha para longas frases */
+}
+
+/* Estilo dos campos de input e select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Para garantir que o padding não afete o tamanho */
+}
+
+/* Estilo para campos de input e select quando em foco */
+input:focus,
+select:focus {
+  border-color: #3498db; /* Cor azul quando o campo está em foco */
+  outline: none;
+}
+
+/* Estilo do botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db; /* Cor do botão */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+/* Mudança de cor ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para o campo de resultado */
+#resultado {
+  background-color: #ecf0f1; /* Fundo claro para o campo de resultado */
+  border: 2px solid #ddd;
+  color: #34495e;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+/* Adicionar um pouco de espaço entre os campos */
+br {
+  line-height: 20px;
+}
+
+/* Media Queries para tornar o formulário responsivo */
+@media (max-width: 768px) {
+  /* Para telas menores que 768px (tablets e dispositivos móveis) */
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%; /* Garante que o formulário ocupe toda a largura da tela */
+  }
+
+  h1 {
+    font-size: 20px; /* Diminui o tamanho do título em telas pequenas */
+    word-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 16px; /* Ajusta o tamanho do subtítulo */
+  }
+
+  label,
+  input,
+  select,
+  button {
+    font-size: 14px; /* Ajusta o tamanho das fontes em dispositivos pequenos */
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  /* Ajusta o tamanho da frase e do conteúdo */
+  h1,
+  h2,
+  label {
+    font-size: 14px; /* Ajusta as frases em telas pequenas */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para telas menores que 480px (celulares) */
+  h1 {
+    font-size: 18px; /* Tamanho do título ainda menor */
+  }
+
+  h2 {
+    font-size: 14px; /* Tamanho do subtítulo ainda menor */
+  }
+
+  input,
+  select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  /* Ajusta as frases em telas muito pequenas */
+  h1,
+  h2,
+  label {
+    font-size: 14px; /* Reduz o tamanho do texto para telas menores */
+    text-align: center;
+  }
+}
