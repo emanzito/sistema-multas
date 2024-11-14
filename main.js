@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const idade = parseFloat(document.getElementById("idade").value);
     if (idade < 18 || idade > 89) {
-      window.alert("Idade de indivíduo inválida para este formulário!");
-      return;
+      window.alert("Idade inválida de indivíduo para este formulário!");
+      return; // Interrompe a execução se a idade for inválida
     }
 
     const velocidade = parseInt(document.getElementById("velocidade").value);
@@ -31,15 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((estradas) => {
         const estrada = estradas.find((e) => e.id === estradaSelecionada);
+
         if (estrada) {
           // Define o limite de velocidade com base no tipo de estrada e no tipo de veículo selecionado
           let limiteVelocidade;
 
           // Verifica se é uma autoestrada (usando limites sem "1") ou estrada nacional (usando limites com "1")
-          if (estrada.limitevelocidadligeiros && estrada.limitevelocidadepesados) {
-            limiteVelocidade = veiculoSelecionado === "ligeiro" ? estrada.limitevelocidadligeiros : estrada.limitevelocidadepesados;
-          } else if (estrada.limitevelocidadligeiros1 && estrada.limitevelocidadepesados1) {
-            limiteVelocidade = veiculoSelecionado === "ligeiro" ? estrada.limitevelocidadligeiros1 : estrada.limitevelocidadepesados1;
+          if ("limitevelocidadligeiros" in estrada && "limitevelocidadepesados" in estrada) {
+            limiteVelocidade =
+              veiculoSelecionado === "ligeiro" ? parseInt(estrada.limitevelocidadligeiros) : parseInt(estrada.limitevelocidadepesados);
+          } else if ("limitevelocidadligeiros1" in estrada && "limitevelocidadepesados1" in estrada) {
+            limiteVelocidade =
+              veiculoSelecionado === "ligeiro" ? parseInt(estrada.limitevelocidadligeiros1) : parseInt(estrada.limitevelocidadepesados1);
           } else {
             alert("Estrada inválida.");
             return;
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const excesso = velocidade - limiteVelocidade;
           const multa = excesso > 0 ? excesso * 10 : 0;
 
-          document.getElementById("resultado").value = multa > 0 ? `Multa a pagar: ${multa}€.` : "Nenhuma multa. Dentro do limite de velocidade.";
+          document.getElementById("resultado").value = multa > 0 ? `Multa a pagar: ${multa}€.` : "Nenhuma multa a pagar.";
         } else {
           alert("Estrada inválida.");
         }
