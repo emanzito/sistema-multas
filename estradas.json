@@ -11,9 +11,9 @@
   { "id": "A24", "nome": "A24 (Viseu-Chaves)", "limitevelocidadligeiros": "120", "limitevelocidadepesados": "90" },
 
   { "id": "N1/IC2", "nome": "N1/IC2", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "80" },
-  { "id": "EN9", "nome": "EN9 (Sintra-Alenquer)", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
-  { "id": "N10", "nome": "Estrada Nacional 10", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
-  { "id": "N117", "nome": "Estrada Nacional 117", "limitevelocidadligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "EN9", "nome": "EN9 (Sintra-Alenquer)", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "N10", "nome": "Estrada Nacional 10", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "80" },
+  { "id": "N117", "nome": "Estrada Nacional 117", "limitevelocidadeligeiros1": "120", "limitevelocidadepesados1": "80" },
   { "id": "N125", "nome": "Estrada Nacional 125", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
   { "id": "N206", "nome": "Estrada Nacional 206", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
   { "id": "lisboa", "nome": "Lisboa, Radial Benfica, Segunda Circula", "limitevelocidadeligeiros1": "90", "limitevelocidadepesados1": "80" },
